@@ -1,209 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zomato Clone</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-      color: #333;
-    }
-
-    /* Navbar */
-    .navbar {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      z-index: 1000;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #e23744;
-    }
-    .search-box {
-      flex: 1;
-      margin: 0 20px;
-      display: flex;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-    .search-box input {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      outline: none;
-    }
-    .search-box button {
-      background: #e23744;
-      color: white;
-      border: none;
-      padding: 0 20px;
-      cursor: pointer;
-    }
-
-    /* Filters */
-    .filters {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      padding: 15px;
-      background: #fff;
-      margin-bottom: 10px;
-    }
-    .filters button {
-      border: 1px solid #ccc;
-      background: #fff;
-      padding: 8px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-    .filters button.active, .filters button:hover {
-      background: #e23744;
-      color: #fff;
-      border-color: #e23744;
-    }
-
-    /* Restaurant grid */
-    .restaurants {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .card-body {
-      padding: 12px;
-    }
-    .card-body h3 {
-      margin: 0;
-      font-size: 18px;
-      color: #333;
-    }
-    .rating {
-      background: green;
-      color: #fff;
-      padding: 2px 8px;
-      border-radius: 6px;
-      font-size: 12px;
-      float: right;
-    }
-    .cuisine, .location {
-      font-size: 14px;
-      color: #666;
-    }
-    .offer {
-      font-size: 13px;
-      margin-top: 5px;
-      color: #e23744;
-      font-weight: bold;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    <!-- Experiment 1  : Basic HTML Page-->
+    <h1>Hello World</h1>
+    <p>This is my first HTML page.</p>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="logo">Zomato</div>
-    <div class="search-box">
-      <input type="text" id="search" placeholder="Search for restaurants...">
-      <button onclick="searchRestaurants()">Search</button>
-    </div>
-  </div>
+    <!-- Experiment 2  Text Formatting-->
+    <b>BOLD</b><br>
+    <u>UNDERLINE</u><br>
+    <i>ITALIC</i><br>
 
-  <!-- Filters -->
-  <div class="filters">
-    <button class="active" onclick="filterType('all')">All</button>
-    <button onclick="filterType('delivery')">Delivery</button>
-    <button onclick="filterType('dining')">Dining</button>
-    <button onclick="filterType('nightlife')">Nightlife</button>
-  </div>
+    <p>H<sub>2</sub>O and x<sup>2</sup></p>
 
-  <!-- Restaurant Cards -->
-  <div class="restaurants" id="restaurants">
-    <div class="card" data-type="delivery">
-      <img src="https://source.unsplash.com/400x300/?pizza" alt="">
-      <div class="card-body">
-        <h3>Pizza Palace <span class="rating">4.2★</span></h3>
-        <p class="cuisine">Italian, Fast Food</p>
-        <p class="location">Civil Lines, Prayagraj</p>
-        <p class="offer">50% OFF up to ₹100</p>
-      </div>
-    </div>
+    <!-- Experiment 3   Lists in HTML  -->
+    <ul>
+        <li>Sugar</li>
+        <li>Salt</li>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Grapes</li>
+    </ul>
 
-    <div class="card" data-type="dining">
-      <img src="https://source.unsplash.com/400x300/?restaurant" alt="">
-      <div class="card-body">
-        <h3>Royal Dining <span class="rating">4.5★</span></h3>
-        <p class="cuisine">North Indian, Chinese</p>
-        <p class="location">Gomti Nagar, Lucknow</p>
-        <p class="offer">10% OFF on dine-in</p>
-      </div>
-    </div>
+    <ol>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C</li>
+    </ol>
 
-    <div class="card" data-type="nightlife">
-      <img src="https://source.unsplash.com/400x300/?bar" alt="">
-      <div class="card-body">
-        <h3>Night Owl Bar <span class="rating">4.0★</span></h3>
-        <p class="cuisine">Cocktails, Snacks</p>
-        <p class="location">Hazratganj, Lucknow</p>
-        <p class="offer">Buy 1 Get 1 Free</p>
-      </div>
-    </div>
-  </div>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Markup Language</dd>
+    </dl>
 
-  <script>
-    function filterType(type) {
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        if (type === 'all' || card.dataset.type === type) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
+    <!-- Experiment 4  Links & Navigation-->
+    <a href='https://www.google.com'>Google</a><br><br>
+    <a href='https://youtu.be/htbsYO3nfQQ?si=uyYCupPsGKPs9Cx4'>Go to You Tube Video </a><br><br>
+    <a href='mailto:test@example.com'>Email Me</a><br><br>
 
-      document.querySelectorAll('.filters button').forEach(btn => btn.classList.remove('active'));
-      event.target.classList.add('active');
-    }
 
-    function searchRestaurants() {
-      let input = document.getElementById("search").value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        let name = card.querySelector("h3").innerText.toLowerCase();
-        if (name.includes(input)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    }
-  </script>
+    <!-- Experiment 5: Images and Multimedia-->
+    <img src="https://admin.uuonline.in/images/logoNameUU.png" height="80%" width="80%" alt="United University"><br><br>
+    <audio controls>
+        <source src='Video1.mp3'>
+    </audio><br><br>
+    <video controls width='800'>
+        <source src='Video1.mp4'>
+    </video><br><br><br>
+
+
+    <!-- Experiment 6: Tables in HTML-->
+    <table border="1px solid black">
+    </tr>
+    <th>DAY</th>
+    <th>SUBJECT</th>
+    <th>TIME</th>
+    <tr>
+        <tr>
+            <td>SUNDAY</td>
+            <td>SOFTWARE </td>
+            <td>9:00- 11:00</td>
+        </tr>
+        <tr>
+            <td>MONDAY</td>
+            <td>COMPUTER NETWORK </td>
+            <td>10:00 - 11:00</td>
+        </tr>
+    </table>
+
+     <!-- Experiment 7: Forms in HTML-->
+
+
 
 </body>
+
 </html>
