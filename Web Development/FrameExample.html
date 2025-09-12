@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Frameset Layout</title>
+</head>
+<frameset rows="40%,60%" border="2">
+    <!-- Frame One -->
+    <frame name="frame1" src="data:text/html,<h2 style='text-align:center;'>Frame One</h2>">
+
+    <!-- Bottom part -->
+    <frameset cols="40%,60%" border="2">
+        <!-- Frame Two -->
+        <frame name="frame2" src="data:text/html,<h2 style='text-align:center;'>Frame Two</h2>">
+
+        <!-- Right side divided -->
+        <frameset rows="30%,70%" border="2">
+            <!-- Frame Three -->
+            <frame name="frame3" src="data:text/html,<h2 style='text-align:center;'>Frame Three</h2>">
+            <!-- Frame Four -->
+            <frame name="frame4" src="data:text/html,<h2 style='text-align:center;'>Frame Four</h2>">
+        </frameset>
+    </frameset>
+</frameset>
+</html>
