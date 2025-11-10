@@ -52,7 +52,7 @@ input:focus {
 button {
   width: 100%;
   padding: 10px;
-  background: #7f00ff;
+  background: blue;
   color: white;
   font-weight: bold;
   border: none;
@@ -72,3 +72,4 @@ button:hover {
   margin-top: 3px;
   display: block;
 }
+
