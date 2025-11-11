@@ -1,0 +1,106 @@
+/*  Universal Selector */
+* {
+  font-family: Arial, sans-serif;
+  margin: 5px;
+  padding: 0;
+}
+
+/*  Element Selector */
+p {
+  color: darkgreen;
+}
+
+/*  ID Selector */
+#special {
+  color: red;
+  font-weight: bold;
+}
+
+/*  Class Selector */
+.highlight {
+  background-color: yellow;
+  color: blue;
+}
+
+/*  Group Selector */
+h1, h2 {
+  color: purple;
+  text-align: center;
+}
+
+/*  Descendant Selector */
+div p {
+  font-style: italic;
+}
+
+/*  Child Selector */
+div > p {
+  border-left: 3px solid orange;
+  padding-left: 5px;
+}
+
+/*  Adjacent Sibling Selector */
+h3 + p {
+  color: deeppink;
+  font-weight: bold;
+}
+
+/*  General Sibling Selector */
+h3 ~ p {
+  background-color: lightyellow;
+}
+
+/*  Attribute Selectors */
+input[type="text"] {
+  border: 2px solid green;
+}
+
+input[type="password"] {
+  border: 2px dashed red;
+}
+
+input[type="email"] {
+  border: 2px dotted blue;
+}
+
+/* 1 Pseudo-class Selectors */
+a:hover {
+  color: white;
+  background-color: teal;
+  padding: 3px;
+  text-decoration: none;
+}
+
+/* 1 Pseudo-element Selectors */
+p::first-letter {
+  font-size: 25px;
+  color: brown;
+}
+
+p::first-line {
+  text-transform: uppercase;
+}
+
+p::before {
+  content: " ";
+  color: gray;
+}
+
+p::after {
+  content: " ";
+  color: gray;
+}
+
+/*  Extra Styling */
+body {
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+.container, .attribute-demo, .pseudo-demo {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  background: #fff;
+}
