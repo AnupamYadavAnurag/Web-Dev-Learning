@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.btn {
+  padding: 12px 25px;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+/* Different colors */
+.blue   { background: #007bff; }
+.red    { background: #e63946; }
+.green  { background: #2a9d8f; }
+.orange { background: #f4a261; }
+
+/* Hover effect */
+.btn:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+
+<button class="btn blue">Blue Button</button>
+<button class="btn red">Red Button</button>
+<button class="btn green">Green Button</button>
+<button class="btn orange">Orange Button</button>
+
+</body>
+</html>
