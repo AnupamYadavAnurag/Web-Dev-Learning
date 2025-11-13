@@ -1,0 +1,18 @@
+<style>
+.gradient-btn {
+  padding: 12px 30px;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff6b6b, #5f27cd);
+  transition: 0.4s;
+}
+.gradient-btn:hover {
+  letter-spacing: 2px;
+  transform: scale(1.05);
+}
+</style>
+
+<button class="gradient-btn">Gradient Button</button>
