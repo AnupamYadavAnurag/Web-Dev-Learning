@@ -1,0 +1,19 @@
+<style>
+.neon {
+  padding: 12px 35px;
+  font-size: 20px;
+  color: white;
+  background: black;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 0 10px #0ff;
+}
+.neon:hover {
+  box-shadow: 0 0 20px #0ff, 0 0 40px #0ff;
+  transform: scale(1.08);
+}
+</style>
+
+<button class="neon">Neon Button</button>
