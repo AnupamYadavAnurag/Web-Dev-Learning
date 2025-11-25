@@ -1,4 +1,4 @@
-let a = 10, b = 5;
+let a = 13, b = 5;
 let op = '+';
 switch(op) {
   case '+': console.log(a + b); break;
