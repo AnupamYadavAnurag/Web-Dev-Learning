@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0e7ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      width: 320px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .login-box h2 {
+      margin: 0 0 20px;
+      text-align: center;
+      color: #222;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #999;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      background: #4f46e5;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #4338ca;
+    }
+
+    .error {
+      color: red;
+      font-size: 13px;
+      min-height: 18px;
+    }
+
+    .success {
+      color: green;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .link a {
+      color: #4f46e5;
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <form id="loginForm">
+      <!-- Email -->
+      <div class="input-group">
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Enter your email">
+        <div id="emailError" class="error"></div>
+      </div>
+
+      <!-- Password -->
+      <div class="input-group">
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+        <div id="passwordError" class="error"></div>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+      <div id="msg" class="success"></div>
+    </form>
+
+    <div class="link">
+      Don't have an account? <a href="#">Register here</a>
+    </div>
+  </div>
+
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const msg = document.getElementById("msg");
+    const emailError = document.getElementById("emailError");
+    const passwordError = document.getElementById("passwordError");
+
+    // Email pattern
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let valid = true;
+      msg.textContent = "";
+
+      // Validate email
+      if (!emailPattern.test(email.value.trim())) {
+        emailError.textContent = "Invalid email format!";
+        valid = false;
+      } else {
+        emailError.textContent = "";
+      }
+
+      // Validate password (min 6 chars for login)
+      if (password.value.trim().length < 6) {
+        passwordError.textContent = "Password must be at least 6 characters!";
+        valid = false;
+      } else {
+        passwordError.textContent = "";
+      }
+
+      if (valid) {
+        msg.textContent = "Login Successful!";
+      }
+    });
+  </script>
+
+</body>
+</html>
