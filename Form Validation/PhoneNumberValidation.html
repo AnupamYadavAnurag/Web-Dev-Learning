@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phone Number Validation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 8px;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Phone Number Validation</h2>
+
+  <form onsubmit="return validatePhone()">
+    <input type="text" id="phone" placeholder="Enter Phone Number">
+    <br>
+    <span id="errorMsg" class="error"></span>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validatePhone() {
+      let phone = document.getElementById("phone").value;
+      let errorMsg = document.getElementById("errorMsg");
+
+      // Regex: Only 10 digits allowed
+      let phonePattern = /^[0-9]{10}$/;
+
+      if (!phonePattern.test(phone)) {
+        errorMsg.innerHTML = "Invalid phone number! Must be 10 digits.";
+        return false; // Stop form submit
+      }
+
+      errorMsg.innerHTML = "";
+      alert("Phone number is valid!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
