@@ -19,9 +19,14 @@ function validateForm() {
   if (password.length < 6) {
     alert("Password must be at least 6 characters long!");
     return false;
+  
+}
+   if (phone.length < 10) {
+    alert("phone must be at least 10 characters long!");
+    return false;
   }
 
   alert("Form submitted successfully!");
   return true;
-}
 </script>
+}
