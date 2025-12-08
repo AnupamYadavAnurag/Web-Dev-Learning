@@ -43,8 +43,9 @@ function validateForm() {
   }
 
   if (valid) {
-    alert("Form Submitted Successfully 🎉");
+    alert("Form Submitted Successfully");
   }
 
   return valid;
 }
+
