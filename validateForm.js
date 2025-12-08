@@ -1,7 +1,9 @@
 <form onsubmit="return validateForm()">
   <input type="text" id="name" placeholder="Enter name"><br>
   <input type="email" id="email" placeholder="Enter email"><br>
+   <input type="phone" id="phone" placeholder="Enter Phone No."><br>
   <input type="password" id="password" placeholder="Enter password"><br>
+
   <button type="submit">Submit</button>
 </form>
 
@@ -9,9 +11,10 @@
 function validateForm() {
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
+  let phone = document.getElementById("phone").value;
   let password = document.getElementById("password").value;
 
-  if (name === "" || email === "" || password === "") {
+  if (name === "" || email === "" || password === "" || phone === "") {
     alert("All fields are required!");
     return false;
   }
